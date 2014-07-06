@@ -5,14 +5,14 @@ import android.graphics.*;
 import android.view.View;
 
 
-public class MyClass extends View{
+public class MyViewClass extends View{
 
     Bitmap launcherIcon;
     float changingY;
     Typeface font;
 
 
-    public MyClass(Context context) {
+    public MyViewClass(Context context) {
         super(context);
 
         launcherIcon = BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher);

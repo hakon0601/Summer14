@@ -6,13 +6,13 @@ import android.os.Bundle;
 public class GFX extends Activity{
 
 
-    MyClass myView;
+    MyViewClass myView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        myView = new MyClass(this);
+        myView = new MyViewClass(this);
         setContentView(myView);
     }
 }

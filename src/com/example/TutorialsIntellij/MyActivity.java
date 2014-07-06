@@ -24,7 +24,7 @@ public class MyActivity extends Activity implements AdapterView.OnItemClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
-        String[] values = {"Graphics", "item2"};
+        String[] values = {"Graphics", "Graphics SurfaceView"};
 
 
 
@@ -70,6 +70,7 @@ public class MyActivity extends Activity implements AdapterView.OnItemClickListe
                 i.setAction("com.example.TutorialsIntellij.GFX");
                 break;
             case 1:
+                i.setAction("com.example.TutorialsIntellij.GFXSURFACE");
                 break;
             case 2:
                 break;
