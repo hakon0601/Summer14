@@ -2,7 +2,9 @@ package com.example.TutorialsIntellij;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -21,8 +23,11 @@ public class MyActivity extends Activity implements AdapterView.OnItemSelectedLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
+
         list = (ListView) findViewById(R.id.list);
         list.setOnItemSelectedListener(this);
+        SharedPreferences getPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
+        this.setTitle(getPrefs.getString("name", "unknown"));
     }
 
 
@@ -37,8 +42,6 @@ public class MyActivity extends Activity implements AdapterView.OnItemSelectedLi
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-            case R.id.aboutUs:
-                break;
             case R.id.prefsItem:
                 Intent i = new Intent("com.example.TutorialsIntellij.PREFS");
                 startActivity(i);

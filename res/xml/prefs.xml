@@ -3,9 +3,9 @@
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
 
     <EditTextPreference
-        android:title="EditText"
+        android:title="Title"
         android:key="name"
-        android:summary="Enter your name"
+        android:summary="Enter name of application"
         />
 
     <CheckBoxPreference
