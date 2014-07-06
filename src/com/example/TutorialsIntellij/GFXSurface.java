@@ -16,7 +16,8 @@ import android.view.View.OnTouchListener;
 public class GFXSurface extends Activity implements OnTouchListener{
 
     MySurfaceViewClass mySurfaceView;
-    float x, y;
+    float x, y, sX, sY, fX, fY, dX, dY, animateX, animateY, scaleX, scaleY;
+    Bitmap test, plus;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,6 +26,13 @@ public class GFXSurface extends Activity implements OnTouchListener{
         mySurfaceView.setOnTouchListener(this);
         x = 0;
         y = 0;
+        sX = 0;
+        sY = 0;
+        fX = 0;
+        fY = 0;
+        dX = dY = animateX = animateY = scaleX = scaleY = 0;
+        test = BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher);
+        plus = BitmapFactory.decodeResource(getResources(), R.drawable.plus);
         setContentView(mySurfaceView);
     }
 
@@ -45,6 +53,26 @@ public class GFXSurface extends Activity implements OnTouchListener{
     public boolean onTouch(View view, MotionEvent motionEvent) {
         x = motionEvent.getX();
         y = motionEvent.getY();
+
+        switch (motionEvent.getAction()) {
+            case MotionEvent.ACTION_DOWN:
+                sX = motionEvent.getX();
+                sY = motionEvent.getY();
+                dX = dY = animateX = animateY = scaleX = scaleY = fX = fY = 0;
+                break;
+            case MotionEvent.ACTION_UP:
+                fX = motionEvent.getX();
+                fY = motionEvent.getY();
+                dX = fX - sX;
+                dY = fY -sY;
+                scaleX = dX/30;
+                scaleY = dY/30;
+                x = 0;
+                y = 0;
+                break;
+        }
+
+
         // returns true to allow for continous updates
         return true;
     }
@@ -89,9 +117,17 @@ public class GFXSurface extends Activity implements OnTouchListener{
                 Canvas canvas = myHolder.lockCanvas();
                 canvas.drawRGB(2, 2, 150);
                 if (x != 0 && y != 0) {
-                    Bitmap test = BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher);
                     canvas.drawBitmap(test, x - (test.getWidth()/2), y - (test.getHeight()/2), null);
                 }
+                if (sX != 0 && sY != 0) {
+                    canvas.drawBitmap(plus, sX - (plus.getWidth()/2), sY - (plus.getHeight()/2), null);
+                }
+                if (fX != 0 && fY != 0) {
+                    canvas.drawBitmap(test, fX - (test.getWidth()/2)-animateX, fY - (test.getHeight()/2) - animateY, null);
+                    canvas.drawBitmap(plus, fX - (plus.getWidth()/2), fY - (plus.getHeight()/2), null);
+                }
+                animateX = animateX + scaleX;
+                animateY = animateY + scaleY;
                 myHolder.unlockCanvasAndPost(canvas);
             }
         }
