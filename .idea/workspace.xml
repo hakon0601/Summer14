@@ -25,10 +25,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="803ec205-9625-45a3-937b-ed2892c17d5d" name="Default" comment="">
-      <change type="MOVED" beforePath="C:\Users\hakon0601\Dropbox\Java\TutorialsIntellij\src\com\example\TutorialsIntellij\MyClass.java" afterPath="$PROJECT_DIR$/src/com/example/TutorialsIntellij/MyViewClass.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/AndroidManifest.xml" afterPath="$PROJECT_DIR$/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/TutorialsIntellij/GFX.java" afterPath="$PROJECT_DIR$/src/com/example/TutorialsIntellij/GFX.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/TutorialsIntellij/MyActivity.java" afterPath="$PROJECT_DIR$/src/com/example/TutorialsIntellij/MyActivity.java" />
+      <change type="DELETED" beforePath="C:\Users\hakon0601\Dropbox\Java\TutorialsIntellij\src\com\example\TutorialsIntellij\MySurfaceViewClass.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/com/example/TutorialsIntellij/GFXSurface.java" afterPath="$PROJECT_DIR$/src/com/example/TutorialsIntellij/GFXSurface.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="TutorialsIntellij.iws" />
@@ -55,7 +53,7 @@
       <file leaf-file-name="MyActivity.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/com/example/TutorialsIntellij/MyActivity.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1071" max-vertical-offset="1632">
+            <state vertical-scroll-proportion="0.0" vertical-offset="949" max-vertical-offset="1632">
               <caret line="72" column="41" selection-start-line="72" selection-start-column="41" selection-end-line="72" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -77,23 +75,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GFXSurface.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="GFXSurface.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/com/example/TutorialsIntellij/GFXSurface.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="73" max-vertical-offset="612">
-              <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MySurfaceViewClass.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/com/example/TutorialsIntellij/MySurfaceViewClass.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8329238" vertical-offset="137" max-vertical-offset="952">
-              <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+            <state vertical-scroll-proportion="0.76551723" vertical-offset="551" max-vertical-offset="1819">
+              <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -125,8 +111,8 @@
         <option value="$PROJECT_DIR$/src/com/example/TutorialsIntellij/MyClass.java" />
         <option value="$PROJECT_DIR$/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/src/com/example/TutorialsIntellij/MyActivity.java" />
-        <option value="$PROJECT_DIR$/src/com/example/TutorialsIntellij/GFXSurface.java" />
         <option value="$PROJECT_DIR$/src/com/example/TutorialsIntellij/MySurfaceViewClass.java" />
+        <option value="$PROJECT_DIR$/src/com/example/TutorialsIntellij/GFXSurface.java" />
       </list>
     </option>
   </component>
@@ -641,18 +627,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/com/example/TutorialsIntellij/GFXSurface.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="73" max-vertical-offset="612">
-          <caret line="27" column="31" selection-start-line="27" selection-start-column="31" selection-end-line="27" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/com/example/TutorialsIntellij/MySurfaceViewClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8329238" vertical-offset="137" max-vertical-offset="952">
-          <caret line="28" column="9" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
+        <state vertical-scroll-proportion="0.76551723" vertical-offset="551" max-vertical-offset="1819">
+          <caret line="52" column="0" selection-start-line="52" selection-start-column="0" selection-end-line="52" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
