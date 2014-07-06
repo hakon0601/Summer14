@@ -11,9 +11,10 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-public class MyActivity extends Activity implements AdapterView.OnItemSelectedListener {
+public class MyActivity extends Activity implements AdapterView.OnItemClickListener {
 
     private ListView list;
     private static final String TAG = "#MyActivity";
@@ -23,9 +24,17 @@ public class MyActivity extends Activity implements AdapterView.OnItemSelectedLi
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
 
+        String[] values = {"Graphics", "item2"};
+
+
+
 
         list = (ListView) findViewById(R.id.list);
-        list.setOnItemSelectedListener(this);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this,
+                android.R.layout.simple_list_item_1, android.R.id.text1, values);
+        list.setAdapter(adapter);
+        list.setOnItemClickListener(this);
+
         SharedPreferences getPrefs = PreferenceManager.getDefaultSharedPreferences(getBaseContext());
         this.setTitle(getPrefs.getString("name", "unknown"));
     }
@@ -54,11 +63,11 @@ public class MyActivity extends Activity implements AdapterView.OnItemSelectedLi
     }
 
     @Override
-    public void onItemSelected(AdapterView<?> adapterView, View view, int pos, long l) {
-        Log.i(TAG, "pos: " + pos);
+    public void onItemClick(AdapterView<?> adapterView, View view, int pos, long l) {
+        Intent i = new Intent();
         switch (pos) {
             case 0:
-                Log.i(TAG, "0 pressed");
+                i.setAction("com.example.TutorialsIntellij.GFX");
                 break;
             case 1:
                 break;
@@ -73,14 +82,8 @@ public class MyActivity extends Activity implements AdapterView.OnItemSelectedLi
             case 6:
                 break;
             default:
-
                 break;
-
         }
-    }
-
-    @Override
-    public void onNothingSelected(AdapterView<?> adapterView) {
-
+        startActivity(i);
     }
 }
