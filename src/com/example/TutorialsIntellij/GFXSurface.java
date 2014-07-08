@@ -24,12 +24,8 @@ public class GFXSurface extends Activity implements OnTouchListener{
         super.onCreate(savedInstanceState);
         mySurfaceView = new MySurfaceViewClass(this);
         mySurfaceView.setOnTouchListener(this);
-        x = 0;
-        y = 0;
-        sX = 0;
-        sY = 0;
-        fX = 0;
-        fY = 0;
+
+        x = y = sX = sY = fX = fY = 0;
         dX = dY = animateX = animateY = scaleX = scaleY = 0;
         test = BitmapFactory.decodeResource(getResources(), R.drawable.ic_launcher);
         plus = BitmapFactory.decodeResource(getResources(), R.drawable.plus);
